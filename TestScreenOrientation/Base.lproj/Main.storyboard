@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCf-y8-gdh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestScreenOrientation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3x-TS-veN">
+                                <rect key="frame" x="76.5" y="318.5" width="222" height="30"/>
+                                <state key="normal" title="push to landscape left controller"/>
+                                <connections>
+                                    <action selector="pushToLandscapeLeftController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbE-n0-OKf"/>
+                                    <segue destination="6FE-yK-zho" kind="presentation" id="st2-At-xo2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CM-Bv-Uop">
+                                <rect key="frame" x="20" y="64" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aF-S2-dmy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G3x-TS-veN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORi-1s-Bbf"/>
+                            <constraint firstItem="9CM-Bv-Uop" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="YZ0-5w-8xc"/>
+                            <constraint firstItem="G3x-TS-veN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eYC-Jf-WUk"/>
+                            <constraint firstItem="9CM-Bv-Uop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kZN-Z4-dhO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fUV-tr-uky"/>
+                    <connections>
+                        <outlet property="backButton" destination="9CM-Bv-Uop" id="SJl-uL-6fP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="-564"/>
+        </scene>
+        <!--Landscape Left Controller-->
+        <scene sceneID="JQD-k8-Ejm">
+            <objects>
+                <viewController id="6FE-yK-zho" customClass="LandscapeLeftController" customModule="TestScreenOrientation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fko-eA-EtU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRQ-1y-pA2">
+                                <rect key="frame" x="99.5" y="318.5" width="176" height="30"/>
+                                <state key="normal" title="push to portrait controller"/>
+                                <connections>
+                                    <action selector="pushToLandscapeLeftController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vpc-mD-gvH"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="aUy-Wo-JnB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxm-F9-3VG">
+                                <rect key="frame" x="20" y="64" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="6FE-yK-zho" eventType="touchUpInside" id="arv-6S-SJZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LRQ-1y-pA2" firstAttribute="centerX" secondItem="Fko-eA-EtU" secondAttribute="centerX" id="9nf-Cz-2YC"/>
+                            <constraint firstItem="Zxm-F9-3VG" firstAttribute="leading" secondItem="8Tw-O0-zbz" secondAttribute="leading" constant="20" id="P7P-6B-p3M"/>
+                            <constraint firstItem="LRQ-1y-pA2" firstAttribute="centerY" secondItem="Fko-eA-EtU" secondAttribute="centerY" id="h6P-xO-in0"/>
+                            <constraint firstItem="Zxm-F9-3VG" firstAttribute="top" secondItem="8Tw-O0-zbz" secondAttribute="top" constant="44" id="n3s-cZ-LJ7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Tw-O0-zbz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68T-F0-wGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oyj-xU-KFU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCf-y8-gdh" customClass="NavigationController" customModule="TestScreenOrientation" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ntm-BV-aCG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rl5-3M-SWD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9p-Sn-PdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="st2-At-xo2"/>
+        <segue reference="aUy-Wo-JnB"/>
+    </inferredMetricsTieBreakers>
+</document>
